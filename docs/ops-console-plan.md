@@ -8,7 +8,7 @@ A staff operations console, not a landing page. Home is the Command Center. Staf
 
 ## Pages
 
-- `/login` — demo staff login. `ops@glossronaut.in` = Ops Analyst, `desk@glossonaut.in` = Desk Approver, any password ≥ 4 chars. Session in localStorage; role gates money actions.
+- `/login` — demo staff login. `ops@glossronaut.in` = Ops Analyst, `desk@glossronaut.in` = Desk Approver, any password ≥ 4 chars. Session in localStorage; role gates money actions.
 - `/` — Command Center: KPI strip, animated A1→A5 spine, New case, last 8 cases.
 - `/run` — New Case / Run Crew: left input pane (message, order-id picker, channel, three demo chips), centre vertical stepper with 800 ms stagger and waiting/running/passed/blocked states, right Case File stack where artefacts append and upstream cards lock.
 - `/case/$caseId` — append-only timeline of the six artefacts plus raw customer text.
