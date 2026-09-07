@@ -8,6 +8,10 @@ This is not a storefront and not a “build me an e-commerce website” starter.
 
 The five-agent plan is in [docs/ops-console-plan.md](docs/ops-console-plan.md).
 
+## Synthetic demo data
+
+All customer, order, case, product, contact, payment-reference, shipment, and metric records in this repository are fictional synthetic demo fixtures. They must not be treated as real customer, payment, or operational information.
+
 ## This is / this is not
 
 **This is** an unofficial Glossronaut Cosmetics **staff operations console** (5-agent Plan–Execute demo).
@@ -17,7 +21,7 @@ The five-agent plan is in [docs/ops-console-plan.md](docs/ops-console-plan.md).
 **This is not** CrewAI, a live multi-LLM runtime, or a RAG/web researcher (A2 is a static clause table).
 **This is not** real payments, courier, or SMS.
 **This is not** official Glossronaut or marketplace software.
-**This is not** a complete `src/` tree on `main` — the runnable source is in `Codebase.zip`.
+**This is** a self-contained repository with the runnable source tracked under `src/` and `public/`.
 
 ## The five agents
 
@@ -32,30 +36,24 @@ The five-agent plan is in [docs/ops-console-plan.md](docs/ops-console-plan.md).
 
 Detail, pages, and Human Desk rules: [docs/ops-console-plan.md](docs/ops-console-plan.md).
 
-## Where the source is
-
-The **complete application source** is in [`Codebase.zip`](Codebase.zip), under:
-
-- `3_ecommerce bot agent automation/src/`
-- `3_ecommerce bot agent automation/public/`
-
-There is no runnable `src/` on `main`. Extract the zip before `npm run dev`.
-
 ## Run the eval build
 
-Requires Node.js 18+ and npm or Bun.
+Requires Bun 1.2.23.
 
 ```bash
 git clone https://github.com/d33pm3/ecommerce-bot-agent-automation.git
 cd ecommerce-bot-agent-automation
-unzip -o Codebase.zip
-cp -a "3_ecommerce bot agent automation/src/." src/
-cp -a "3_ecommerce bot agent automation/public/." public/
-npm i
-npm run dev
+bun install --frozen-lockfile
+bun run dev
 ```
 
-After extract, `src/routes/login.tsx` must exist. If it does not, the zip did not unpack.
+Validate the same baseline used by CI:
+
+```bash
+bun run lint
+bun run test
+bun run build
+```
 
 Demo staff (do not change — the seeded login expects these):
 
