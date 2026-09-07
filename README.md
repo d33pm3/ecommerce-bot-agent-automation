@@ -8,6 +8,10 @@ This is not a storefront and not a “build me an e-commerce website” starter.
 
 The five-agent plan is in [docs/ops-console-plan.md](docs/ops-console-plan.md).
 
+## Synthetic demo data
+
+All customer, order, case, product, contact, payment-reference, shipment, and metric records in this repository are fictional synthetic demo fixtures. They must not be treated as real customer, payment, or operational information.
+
 ## This is / this is not
 
 **This is** an unofficial Glossronaut Cosmetics **staff operations console** (5-agent Plan–Execute demo).
